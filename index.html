@@ -93,10 +93,10 @@
     <h1><span class="grad">AI 真人剧 / 短剧 Agent 化生产工作流</span><br>调研报告</h1>
     <p class="sub">基于「翔宇工作流」AI 导演台视频的概念归纳 × 截止 2026 年 11 月全球最先进的 Agent 化 AI 视频生产管线全景</p>
     <div class="meta">
-      <span>📅 调研截止：2026-11-01（第二轮深挖版）</span>
+      <span>📅 调研截止：2026-11-01（第二轮深挖 + 互动影游专项版）</span>
       <span>🎥 基准视频：YouTube ji3nBw_QEo0（2026-10-28 发布）</span>
       <span>🔬 信源：GitHub API 核验 + 仓库 README 精读 + Google Research + 36氪/DataEye + 官方发布</span>
-      <span>📊 覆盖：97 个开源项目地图 · 20+ 框架深评 · 10+ 视频模型 · 4 篇前沿论文 · Skill 生态 40+</span>
+      <span>📊 覆盖：97 个开源项目地图 · 20+ 框架深评 · 10+ 视频模型 · 4 篇前沿论文 · Skill 生态 40+ · 互动影游专项选型</span>
     </div>
     <div class="toc">
       <b style="color:var(--cyan)">目录</b>
@@ -112,6 +112,7 @@
         <li><a href="#s9">一致性工程实战清单 + 成本与效率账本</a></li>
         <li><a href="#s10">商业验证与案例 + 风险与局限</a></li>
         <li><a href="#s11">结论与行动建议</a></li>
+        <li><a href="#s12"><b>互动影游专项：结合本机情况的选型综合分析（v3 新增）</b></a></li>
       </ol>
     </div>
   </div>
@@ -639,9 +640,80 @@
 </div>
 
 <div class="divider"></div>
+
+<!-- ============ 12. 互动影游专项 ============ -->
+<h2 id="s12"><span class="no">12</span>互动影游专项：结合本机情况的选型综合分析</h2>
+<p class="lead">应用场景：以互动影游为主业模式，兼做 AI 真人短剧。基于 2026-11 最新生态（大厂平台混战 + 开源框架成熟）+ 本机实际资产盘点，给出"哪条路线最优"的明确答案。</p>
+
+<h3>12.1 先看清赛道：2026 下半年互动影游进入"诸神混战"</h3>
+<table>
+  <tr><th>玩家</th><th>产品</th><th>时间</th><th>核心能力</th><th>状态</th></tr>
+  <tr><td><b>字节·剪映</b></td><td><b>ICG Studio</b></td><td>2026-09-20</td><td>AI 互动影游创作平台（"STORIES, MADE PLAYABLE"）：主线+抉择点 → Agent 对话生成多支线 → 全局资产跨分支复用 → 分镜生成 → 可运行影游；支持英法西中多语；剪映 MAU 8 亿打底</td><td><span class="tag t-cyan">限量内测</span></td></tr>
+  <tr><td><b>腾讯</b></td><td><b>OnSolo</b></td><td>2026-08</td><td>AI 原生一站式（"a Crew of One"）：短剧 / <b>FMV Game 互动影游</b> / Meme Play / Canvas 四形态；Story Flow 节点地图 AI 自动延展三分支；角色卡锁定一致性；内置混元+可灵3.0+Seedance2.0+Nano Banana+Vidu 多模型；原生出海定位</td><td><span class="tag t-green">已开放</span></td></tr>
+  <tr><td><b>互影科技</b></td><td><b>AltFlow</b></td><td>2026-06-12</td><td>互动叙事创作 AI Agent：可视化节点拖拽搭分支 + 64 并发智能单元 125 秒拆 50 万字小说 + Benchmark 多模型路由；配套 IP 库/算力/全球发行；已发行双视角互动电影《新世界:暗影成双》</td><td><span class="tag t-green">已发布</span></td></tr>
+  <tr><td><b>腾讯</b></td><td>造化工坊 / TDream / 探梦</td><td>2026 4-6月</td><td>AI 互动叙事创作平台 / "可玩电影世界" / 互动影游社区——腾讯三线并进</td><td>陆续曝光</td></tr>
+  <tr><td><b>芒果TV</b></td><td>《公主请自重》《马上来财》</td><td>2025-12 / 2026春节</td><td>平台自营互动影游纳入会员体系；《马上来财》上线数天播放破 1500 万</td><td>已上线</td></tr>
+  <tr><td><b>华策影视</b></td><td>《代号:迷失》</td><td>2026-08 开机</td><td>真人互动影游，传统影视公司下场</td><td>制作中</td></tr>
+  <tr><td><b>监管层</b></td><td>互动剧独立备案</td><td>2026-09</td><td>广电总局拍摄制作备案公示中<b>互动剧首次作为独立类别</b>——正式纳入常态化管理，赛道合法化里程碑</td><td><span class="tag t-cyan">新政</span></td></tr>
+</table>
+
+<div class="card hl">
+  <h4 style="margin-top:0">市场规模与标杆数据（DataEye 研究院）</h4>
+  <ul class="tight" style="font-size:13.5px">
+    <li>国内真人互动影游 2026 年规模预计 <b class="num" style="color:var(--cyan)">18–20 亿元</b>（2024≈10亿 → 2025≈15亿 → 2026E 18-20亿），同比增速超 20%；业内普遍认为赛道开发度<b>不足 10%</b>，仍是蓝海</li>
+    <li>《盛世天下》系列累计销量破 <b class="num">600 万套</b>；女帝篇上线 21 天 500 万套、5 天营收预估 7000 万元、全系列预估 1.6 亿元——头部精品具备千万级销量潜质</li>
+    <li>字节首款 AI 互动影游《不问凡尘》已上 Steam（首发折后 19.9 元）：&lt;20 人团队、&lt;1 年周期、画面全由 <b>Seedance 2.5</b> 生成，成本与周期相比同体量传统游戏<b>缩小约两位数百分比</b>——AI FMV 路线的可行性已被字节亲自验证</li>
+    <li>历史脉络：《隐形守护者》(2019 开创品类) → 《完蛋!我被美女包围了!》(2024 引爆) → 《盛世天下》(2025-26 走出新手村) → AI FMV 时代(2026-)</li>
+    <li>痛点即机会：传统 FMV"分支剧情拍摄成本指数级上升"，<b>AI 生成恰好把分支边际成本打到接近零</b>——单人制作庞大世界观互动影游成为可能</li>
+  </ul>
+</div>
+
+<h3>12.2 候选方案盘点：互动影游没有"开源头部引擎"，主战场是平台</h3>
+<p style="font-size:13.5px">先给一个反直觉但重要的调研结论：<b>GitHub 上不存在"互动影游界的 OpenMontage"</b>。分支视频播放器类项目普遍 &lt;100 星（Cacophony 43⭐ 停更 2015 / bandersnatch-engine 21⭐ 停更 2019 / hexwave 3⭐），开源社区的重心全在"生成管线"而非"互动运行时"。互动运行时的四条现实路线：</p>
+<table>
+  <tr><th>路线</th><th>代表</th><th>优势</th><th>劣势</th></tr>
+  <tr><td><b>① 大厂平台派</b><br><span class="tag t-cyan">推荐主路线</span></td><td>腾讯 OnSolo / 剪映 ICG Studio / 互影 AltFlow</td><td>剧本→分支→资产→分镜→可玩作品全链路闭环；多模型内置；角色一致性方案内置；分发生态（抖音/红果/Steam）</td><td>内容在云端、平台绑定；定制性弱；ICG 仍在内测</td></tr>
+  <tr><td><b>② 开源框架派</b><br><span class="tag t-amber">生成层复用</span></td><td>OpenMontage（74,143★）/ ShowVi / ViMax / Toonflow</td><td>12 流水线+Backlot 审批+700 skill；本地可控；成本最低（真实素材管线零 API）；License 需逐个核对</td><td><b>均无互动运行时</b>——只解决"生成"，不解决"分支播放/存档/结局"</td></tr>
+  <tr><td><b>③ FMV 引擎派</b><br><span class="tag t-amber">运行时层</span></td><td>Unity FMV Toolkit（Gumroad）/ 自研 Web 播放器 / RenPy 视频分支</td><td>分支状态机/限时选择/多平台导出（Win/Android/WebGL）成熟；Steam 上架无障碍</td><td>要自己写或买（FMV Toolkit 付费资产）；与生成管线需手工粘合</td></tr>
+  <tr><td><b>④ 自建全栈派</b><br><span class="tag t-green">终态路线</span></td><td>开源生成管线 + 自有播放器（本机 SnapDrama 架构复用）</td><td>完全可控；资产/用户/数据全归自己；可把 SnapDrama 的账号/金币/IAA 变现直接搬过来</td><td>工程量大；需打通"分支图数据结构 + 播放器 + 进度存档"</td></tr>
+</table>
+
+<h3>12.3 综合分析：结合本机资产的推荐架构</h3>
+<p style="font-size:13.5px">本机实际情况（DreamPlay 业务矩阵）：已有 <b>SnapDrama</b> 海外短剧 App（NestJS+Vue3+Capacitor，已上线，IAA/金币变现，Cloudflare R2 媒体库）、<b>nuri</b> AI 创作工作台（无限画布）、<b>chuk</b> AI 模型网关（OpenRouter 定位）、东京部署节点；以及昆仑合作互动剧项目（女频英文、6-10 幕、2-3 结局、10 分钟总长、内容量 6-8 倍）。这决定了选型逻辑：<b>不是从零挑一个工具，而是"生成层复用开源 + 运行时层自有 + 平台做分发与验证"三层分工。</b></p>
+
+<div class="card hl">
+  <h4 style="margin-top:0">🎯 最终推荐：三层组合（生成 OpenMontage + 运行时自建 + 平台 OnSolo/ICG）</h4>
+  <table>
+    <tr><th>层</th><th>选什么</th><th>为什么（结合本机）</th></tr>
+    <tr><td><b>生成层</b><br>(内容怎么来)</td><td><b>OpenMontage</b> 为主 + ShowVi 闭环质检抄作业<br><span class="tag t-amber">AGPL 注意</span></td><td>① 12 流水线覆盖短剧+预告片+本地化，与"兼做 AI 真人剧"完全复用同一条管线；② Backlot 审批门禁适配 6-8 倍内容量的分支生产管理；③ 真实素材管线可零 API 成本出分支素材；④ 已接入 Seedance 2.5/Kling/MiniMax H3 全部本机可用模型；⑤ 60s 成片 $1.33 的成本结构，按 6-8 倍内容量放大仍可控。<b>AGPL-3.0：自用/内部生产无碍，若把管线代码二次分发给他人才需开源——用于内容生产不触发</b></td></tr>
+    <tr><td><b>运行时层</b><br>(玩家怎么玩)</td><td><b>自建 Web 互动播放器</b>（复用 SnapDrama 架构）<br>或 Unity FMV Toolkit（若上 Steam）</td><td>① 本机已有 NestJS+Vue3+R2 的视频 App 全套骨架，加"分支图 JSON + 选择 UI + 进度存档"三件套即可变互动播放器——<b>这是相对全行业最快的起跑线</b>；② 分支数据结构建议：节点 = {video_url, choices[], effects}, 存 SQLite，与 SnapDrama 后端同构；③ Steam 版再套 Unity FMV Toolkit（ScriptableObject 状态机 + 限时选择 + Win/Android/WebGL 导出）</td></tr>
+    <tr><td><b>分发与验证层</b><br>(怎么触达玩家)</td><td><b>腾讯 OnSolo</b> 立即可用 + <b>ICG Studio</b> 申请内测 + SnapDrama 自有渠道</td><td>① OnSolo 已开放、积分制定价透明（Seedance 720P ≈ $0.149/秒 接近火山原价），可立即用它做原型验证与出海参赛；② ICG Studio 多语原生 + 抖音系分发，女频英文题材对口；③ 成熟作品收进 SnapDrama 自有 App（金币解锁分支 = 天然互动剧付费点），IAA 变现模型直接复用</td></tr>
+  </table>
+  <div class="quote" style="font-size:13px; margin-top:8px"><b>一句话答案：没有一个开源项目能同时解决互动影游的"生成+运行+分发"——最优解是 OpenMontage 管线（生成）× SnapDrama 架构自建播放器（运行）× OnSolo/ICG Studio（平台验证与分发）的三层组合。若必须选单一项目起步：选 <b>OnSolo</b>（已开放、全链路、FMV 形态原生）；若走开源自建：选 <b>OpenMontage</b>（生成层天花板）+ 自写 500 行分支播放器。</b></div>
+</div>
+
+<h3>12.4 分支叙事生产管线：AI 真人剧管线的"乘法改造"</h3>
+<p style="font-size:13.5px">本报告第 8 节的五层架构（L0-L4）对互动影游依然成立，但要做三处"乘法改造"：</p>
+<table>
+  <tr><th>层</th><th>线状短剧做法</th><th>互动影游改造（×分支）</th></tr>
+  <tr><td><b>L1 资产层</b></td><td>角色库 + 道具状态机 + 世界状态</td><td><b>状态机升级为"跨分支共享资产池"</b>：全局资产（人物/场景/道具）一次生成、全分支复用（ICG Studio 同款思路）；每个分支节点引用资产 ID 而非重新生成——一致性天然成立，成本不随分支数爆炸</td></tr>
+  <tr><td><b>L2 分镜层</b></td><td>线性分镜序列</td><td><b>分镜图 → 分支 DAG</b>：剧本拆为节点地图（OnSolo Story Flow 同款）；AI 自动延展三分支 + 人工审定关键抉择点；抉择点需满足"情绪张力最大处"原则（盛世天下/完蛋系列验证的付费冲动点）</td></tr>
+  <tr><td><b>L4 质检层</b></td><td>VLM 六维质检单线</td><td><b>质检 × 分支覆盖测试</b>：ShowVi 式 VLM 闭环跑每条分支；另加"路径覆盖测试"（自动化走完所有分支组合，校验跳转/存档/结局解锁）——这是影游特有的新质检维度</td></tr>
+  <tr><td><b>新增 L5 运行层</b></td><td>—</td><td><b>互动播放器 + 进度系统</b>：限时选择 UI / 分支跳转预加载（下一节点视频边看边载，防卡顿）/ 存档与结局图鉴（"还有 N 个结局可解锁"是留存钩子）/ 多语字幕（八语言经验直接复用）</td></tr>
+  </table>
+  <div class="ok"><b>✅ 本机落地路线图（建议 4 阶段）：</b>① <b>本周</b>：OnSolo 注册（送 100 积分）跑一个 3 节点 demo，验证 FMV 手感与女频英文题材适配度；同步申请 ICG Studio 内测。② <b>2-4 周</b>：昆仑项目剧本（6-10 幕）用 OpenMontage Cinematic 流水线生成全局资产与主线素材，ShowVi 式质检跑通；分支抉择点按"情绪张力"原则人工标定。③ <b>1-2 月</b>：SnapDrama 加互动播放模块（分支 JSON + 选择 UI + 存档），首部作品进自有 App 金币解锁测试。④ <b>3 月+</b>：数据验证后扩 Steam 版（Unity FMV Toolkit）与多语出海（chuk 网关 + 小云雀式本土化）。</div>
+
+<h3>12.5 风险与对策（互动影游特有）</h3>
+<table>
+  <tr><th>风险</th><th>说明</th><th>对策</th></tr>
+  <tr><td><b>流量速朽</b></td><td>《完蛋》爆火后跟风作大量扑街，行业曾"看似热闹实则惨淡"（上海文旅产业研究院警示）</td><td>题材差异化（女频英文+劳拉风冒险是蓝海切口）；不做《完蛋》式颜值快消品，做系列化 IP</td></tr>
+  <tr><td><b>分支成本失控</b></td><td>6-8 倍内容量若无全局资产复用，成本照样爆炸</td><td>强制走"全局资产池 + 节点引用"模式；用 OpenMontage 真实素材管线填充非关键分支</td></tr>
+  <tr><td><b>平台锁定</b></td><td>OnSolo/ICG 内容与账号都在平台侧</td><td>平台只做验证与首发，成品同步自建 SnapDrama 渠道；素材源文件本地留存</td></tr>
+  </table>
+
 <footer>
-  <p><b>信源清单</b>（关键断言均可回溯）：基准视频完整字幕（yt-dlp 提取）· Google Research 官方博客 2026-09-24《Automating coherent long-form video generation》· arXiv 2610.20571 (ATAS) · GitHub API 实时星数核验（2026-11-01）· <b>仓库 README 全文精读</b>（OpenMontage / waoowaoo / ShowVi / Toonflow / 火宝 huobao-drama / awesome-manyu / LocalMiniDrama / BigBanana / drama-skills / shuohao-skills / awesome-ai-video / ATAS）· <b>awesome-manyu 97 项目索引（数据更新 2026-10-28，GitHub Actions 每周刷新）</b> · 即梦短剧工作室上线报道（10-26，知乎专栏 / 新浪科技 / QQ科技）· 新浪科技 AI短剧 Q1 占比 95%（10-28）/ 成本十分之一（10-29）· 36氪（10-08 产业访谈 / 10-14 价格战 / 10-30 抖音激励）· DataEye 2026H1 报告 · 海外短剧 App 内购 21 亿美元（2026 前9月预估）· OpenAI 官方 Sora 停服公告 · 腾讯新闻 Vidu Q4 实测（10-15）· 东方财富 AI漫剧10家公司（10-10）· 360娱乐（10-28）· MiniMax 官方手册（vault 存档）</p>
-  <p>报告生成：opencode · glm-5.3 · 2026-11-01 · <b>第二轮深挖版</b>（10 个核心仓库 README 精读 + 20+ 仓库 GitHub API 核验 + 近一周时效过滤检索）· 本地素材存于 ./assets/ · 图片版权归原作者所有（GitHub OG 图 / Google Research 官方图 / ATAS 官方图 / YouTube 视频封面，研究性引用）</p>
+  <p><b>信源清单</b>（关键断言均可回溯）：基准视频完整字幕（yt-dlp 提取）· Google Research 官方博客 2026-09-24《Automating coherent long-form video generation》· arXiv 2610.20571 (ATAS) · GitHub API 实时星数核验（2026-11-01）· <b>仓库 README 全文精读</b>（OpenMontage / waoowaoo / ShowVi / Toonflow / 火宝 huobao-drama / awesome-manyu / LocalMiniDrama / BigBanana / drama-skills / shuohao-skills / awesome-ai-video / ATAS）· <b>awesome-manyu 97 项目索引（数据更新 2026-10-28，GitHub Actions 每周刷新）</b> · 即梦短剧工作室上线报道（10-26，知乎专栏 / 新浪科技 / QQ科技）· 新浪科技 AI短剧 Q1 占比 95%（10-28）/ 成本十分之一（10-29）· 36氪（10-08 产业访谈 / 10-14 价格战 / 10-30 抖音激励）· DataEye 2026H1 报告 · 海外短剧 App 内购 21 亿美元（2026 前9月预估）· OpenAI 官方 Sora 停服公告 · 腾讯新闻 Vidu Q4 实测（10-15）· 东方财富 AI漫剧10家公司（10-10）· 360娱乐（10-28）· MiniMax 官方手册（vault 存档）· <b>互动影游专项：剪映 ICG Studio（腾讯网 09-29 发布报道 / 百度百科）· 腾讯 OnSolo（腾讯网 09-05 / aisharenet 评测）· 互影 AltFlow（百度百科，06-12 AltNext2026 发布）· 流媒体网"诸神混战"（09-29）· DataEye 互动影游 18-20 亿预测与《盛世天下》系列 600 万套 · 上海文旅产业研究院《盛世天下》观察（07-02）· 广电总局 2026-09 互动剧独立备案公示 · Steam《不问凡尘》《CAMERAMAN NEVER DIES》页面 · Unity FMV Toolkit（Gumroad）</b></p>
+  <p>报告生成：opencode · glm-5.3 · 2026-11-01 · <b>v3 互动影游专项版</b>（第二轮深挖 + 第 12 章互动影游选型综合分析）· 本地素材存于 ./assets/ · 图片版权归原作者所有（GitHub OG 图 / Google Research 官方图 / ATAS 官方图 / YouTube 视频封面，研究性引用）</p>
 </footer>
 
 </div>
